@@ -18,28 +18,28 @@ def filter_pokemons(candidates, attribute, value):
     #It will return a list of pokemons that match the attribute and value given.
     return [p for p in candidates if p.get(attribute) == value]
 
-def apply_inference_rules(pokemons, respuestas):
+def apply_inference_rules(pokemons, user_answers):
     #Function to apply the inference rules to the candidates list.
     #It will return a list of pokemons that match the rules given.
     candidatos = []
 
     for p in pokemons:
         # R1–R3: Gen + Región
-        if respuestas.get("generation") and respuestas.get("region"):
+        if user_answers.get("generation") and user_answers.get("region"):
             # R1: If H1 = Gen I and H2 = Kanto, then the Pokémon is from the first generation.
-            if respuestas["generation"] == "Gen I" and respuestas["region"] == "Kanto":
+            if user_answers["generation"] == "Gen I" and user_answers["region"] == "Kanto":
                 if p["generation"] == "Gen I" and p["region"] == "Kanto":
                     candidatos.append(p)
                     continue
 
             # R2: If H1 = Gen II and H2 = Johto, then the Pokémon is from the second generation.
-            if respuestas["generation"] == "Gen II" and respuestas["region"] == "Johto":
+            if user_answers["generation"] == "Gen II" and user_answers["region"] == "Johto":
                 if p["generation"] == "Gen II" and p["region"] == "Johto":
                     candidatos.append(p)
                     continue
 
             # R3: If H1 = Gen III and H2 = Hoenn, then the Pokémon is from the third generation.
-            if respuestas["generation"] == "Gen III" and respuestas["region"] == "Hoenn":
+            if user_answers["generation"] == "Gen III" and user_answers["region"] == "Hoenn":
                 if p["generation"] == "Gen III" and p["region"] == "Hoenn":
                     candidatos.append(p)
                     continue
@@ -74,24 +74,24 @@ def apply_inference_rules(pokemons, respuestas):
 
     return candidatos
 
-def calculate_match_score(pokemon, respuestas):
+def calculate_match_score(pokemon, user_answers):
     """Calculate how many attributes of a Pokémon match the user's answers."""
     score = 0
-    if pokemon["generation"] == respuestas.get("generation"):
+    if pokemon["generation"] == user_answers.get("generation"):
         score += 1
-    if pokemon["region"] == respuestas.get("region"):
+    if pokemon["region"] == user_answers.get("region"):
         score += 1
-    if pokemon["type"] == respuestas.get("type"):
+    if pokemon["type"] == user_answers.get("type"):
         score += 1
-    if pokemon["evolution"] == respuestas.get("evolution"):
+    if pokemon["evolution"] == user_answers.get("evolution"):
         score += 1
-    if pokemon["evolution_method"] == respuestas.get("evolution_method"):
+    if pokemon["evolution_method"] == user_answers.get("evolution_method"):
         score += 1
-    if pokemon["color"] == respuestas.get("color"):
+    if pokemon["color"] == user_answers.get("color"):
         score += 1
-    if pokemon["stats"]["speed"] == respuestas.get("speed"):
+    if pokemon["stats"]["speed"] == user_answers.get("speed"):
         score += 1
-    if pokemon["stats"]["defense"] == respuestas.get("defense"):
+    if pokemon["stats"]["defense"] == user_answers.get("defense"):
         score += 1
     return score
 
@@ -165,85 +165,83 @@ def expert_system():
     print("Think of a Pokémon, and I'll try to guess which one it is...")
 
 
-    respuestas = {}
+    user_answers = {}
 
+    
     # 1. Generation
-
+    print("=================================================================================")
     gen = ask_question("Which generation is your Pokémon from?", generations)
-    respuestas["generation"] = gen
-    candidates = filter_pokemons(candidates, "generation", gen)
-
+    user_answers["generation"] = gen
+    # Apply rule-based inference
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
     # 2. Region
-
     reg = ask_question("Which region is your Pokémon from?", regions)
-    respuestas["region"] = reg
-    candidates = filter_pokemons(candidates, "region", reg)
-
+    user_answers["region"] = reg
+    # Apply rule-based inference
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
     # 3. Type
-
     type_ = ask_question("What type is your Pokémon? (e.g. Fire, Electric)", types)
-    respuestas["type"] = type_
-    candidates = filter_pokemons(candidates, "type", type_)
-
+    user_answers["type"] = type_
+    # Apply rule-based inference
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
     # 4. Evolves?
     evolution = ask_question("Does your Pokémon evolve? (Yes, No)", ["Yes", "No"])
-    respuestas["evolution"] = evolution
-    candidates = filter_pokemons(candidates, "evolution", evolution)
-
+    user_answers["evolution"] = evolution
+    # Apply rule-based inference
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
     # 5. Evolution method
     if evolution == "Yes":
         method = ask_question("How does your Pokémon evolve?", evo_methods)
-        respuestas["evolution_method"] = method
-        candidates = filter_pokemons(candidates, "evolution_method", method)
-
+        user_answers["evolution_method"] = method
+        # Apply rule-based inference
+        rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
     # 6. Color
-
     color = ask_question("What is the dominant color of your Pokémon?", colors)
-    respuestas["color"] = color
-    candidates = filter_pokemons(candidates, "color", color)
-
-    # 7. Speed
-
-    speed = ask_question("What is its speed level? (High, Medium, Low)", speeds)
-    respuestas["speed"] = speed
-    candidates = [p for p in candidates if p["stats"]["speed"] == speed]
-
-    # 8. Defense
-
-    defense = ask_question("What is its defense level? (High, Medium, Low)", defenses)
-    respuestas["defense"] = defense
-    candidates = [p for p in candidates if p["stats"]["defense"] == defense]
-
+    user_answers["color"] = color
     # Apply rule-based inference
-    rule_candidates = apply_inference_rules(candidates, respuestas)
-
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
+    # 7. Speed
+    speed = ask_question("What is its speed level? (High, Medium, Low)", speeds)
+    user_answers["speed"] = speed
+    # Apply rule-based inference
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
+    # 8. Defense
+    defense = ask_question("What is its defense level? (High, Medium, Low)", defenses)
+    user_answers["defense"] = defense
+    # Apply rule-based inference
+    rule_candidates = apply_inference_rules(candidates, user_answers)
+    print("=================================================================================")
     #Final results
-    final_candidates = list(set(p["name"] for p in rule_candidates))
     # Calculate match scores for all Pokémon
     scored_candidates = [
-    (pokemon, calculate_match_score(pokemon, respuestas)) for pokemon in candidates
-]
-    # Filter out Pokémon with a score of 0 (no matches) and ensure the generation matches
-    scored_candidates = [
-        (pokemon, score) for pokemon, score in scored_candidates if score > 0 and pokemon["generation"] == respuestas["generation"]
+    (pokemon, calculate_match_score(pokemon, user_answers)) for pokemon in rule_candidates
     ]
-
+    # Sort candidates by match score in descending order
+    scored_candidates.sort(key=lambda x: x[1], reverse=True)
     # Limit the results to the first 5 candidates
     scored_candidates = scored_candidates[:5]
 
     # Display results
     print("\nResults:")
-    if len(final_candidates) == 1:
-        print(f"\nI think your Pokémon is: {final_candidates[0]}!")
-        print("Is that correct? Here is the list of the five most similar Pokémons:")
-        for pokemon, score in scored_candidates:
-            print(f"- {pokemon['name']} (Match Score: {score})")
-    elif len(scored_candidates) > 0:
-        print("\nI found multiple possible Pokémon (showing up to 5):")
-        for pokemon, score in scored_candidates:
-            print(f"- {pokemon['name']} (Match Score: {score})")
+    if len(scored_candidates) > 0:
+        # Print the best match
+        best_match = scored_candidates[0]
+        print(f"\nI think your Pokémon is: {best_match[0]['name']}!")
+
+        # Print other possible matches
+        if len(scored_candidates) > 1:
+            print("\nIs not the Pokemon you had in mind? The closests matches are:")
+            for pokemon, score in scored_candidates[1:]:
+                print(f"- {pokemon['name']} (Match Score: {score})")
         # Ask the user if they want to refine their answers
-        play_again = ask_question("\nWould you like to refine your answers? (Yes, No)", ["Yes", "No"])
+        play_again = ask_question("\nWould you like to try again? (Yes, No)", ["Yes", "No"])
         if play_again == "Yes":
             expert_system()  # Restart the system
         else:
