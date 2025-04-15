@@ -1,0 +1,678 @@
+[
+  {
+    "name": "Charmander",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Orange",
+    "type": "Fire",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Bulbasaur",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Green",
+    "type": "Grass/Poison",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Squirtle",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Blue",
+    "type": "Water",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Cyndaquil",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Blue",
+    "type": "Fire",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Totodile",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Blue",
+    "type": "Water",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Chikorita",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Green",
+    "type": "Grass",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Treecko",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Green",
+    "type": "Grass",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "High",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Torchic",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Orange",
+    "type": "Fire",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Mudkip",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Water",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Pikachu",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Yellow",
+    "type": "Electric",
+    "evolution": "Yes",
+    "evolution_method": "Thunder Stone",
+    "stats": {
+      "speed": "High",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Jigglypuff",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Pink",
+    "type": "Normal/Fairy",
+    "evolution": "Yes",
+    "evolution_method": "Moon Stone",
+    "stats": {
+      "speed": "Low",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Meowth",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Beige",
+    "type": "Normal",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Growlithe",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Orange",
+    "type": "Fire",
+    "evolution": "Yes",
+    "evolution_method": "Fire Stone",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Machop",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Gray",
+    "type": "Fighting",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Abra",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Brown",
+    "type": "Psychic",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "High",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Geodude",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Gray",
+    "type": "Rock/Ground",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Gastly",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Purple",
+    "type": "Ghost/Poison",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Eevee",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Brown",
+    "type": "Normal",
+    "evolution": "Yes",
+    "evolution_method": "Various Stones/Friendship",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Dratini",
+    "generation": "Gen I",
+    "region": "Kanto",
+    "color": "Blue",
+    "type": "Dragon",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Mareep",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Blue",
+    "type": "Electric",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Houndour",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Black",
+    "type": "Dark/Fire",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Swinub",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Brown",
+    "type": "Ice/Ground",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Togepi",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "White",
+    "type": "Fairy",
+    "evolution": "Yes",
+    "evolution_method": "Friendship",
+    "stats": {
+      "speed": "Low",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Spinarak",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Green",
+    "type": "Bug/Poison",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Marill",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Blue",
+    "type": "Water/Fairy",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Larvitar",
+    "generation": "Gen II",
+    "region": "Johto",
+    "color": "Green",
+    "type": "Rock/Ground",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Poochyena",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Gray",
+    "type": "Dark",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Zigzagoon",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Brown",
+    "type": "Normal",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Lotad",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Water/Grass",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Seedot",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Brown",
+    "type": "Grass",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Ralts",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "White",
+    "type": "Psychic/Fairy",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Sableye",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Purple",
+    "type": "Dark/Ghost",
+    "evolution": "No",
+    "evolution_method": "",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Aron",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Gray",
+    "type": "Steel/Rock",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Electrike",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Green",
+    "type": "Electric",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "High",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Carvanha",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Water/Dark",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "High",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Numel",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Yellow",
+    "type": "Fire/Ground",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Spoink",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Gray",
+    "type": "Psychic",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Trapinch",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Orange",
+    "type": "Ground",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Cacnea",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Green",
+    "type": "Grass",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Swablu",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Normal/Flying",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Barboach",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Gray",
+    "type": "Water/Ground",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Corphish",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Red",
+    "type": "Water",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Shuppet",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Purple",
+    "type": "Ghost",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Duskull",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Gray",
+    "type": "Ghost",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Snorunt",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "White",
+    "type": "Ice",
+    "evolution": "Yes",
+    "evolution_method": "Level/Dawn Stone (for Froslass)",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Beldum",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Silver",
+    "type": "Steel/Psychic",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Makuhita",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Yellow",
+    "type": "Fighting",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Wynaut",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Psychic",
+    "evolution": "Yes",
+    "evolution_method": "Level (with high happiness during the day)",
+    "stats": {
+      "speed": "Low",
+      "defense": "Medium"
+    }
+  },
+  {
+    "name": "Feebas",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Brown",
+    "type": "Water",
+    "evolution": "Yes",
+    "evolution_method": "High Beauty (Gen III) / Prism Scale (later)",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Clamperl",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Water",
+    "evolution": "Yes",
+    "evolution_method": "Trade with Deep Sea Tooth/Scale",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  },
+  {
+    "name": "Meditite",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Blue",
+    "type": "Fighting/Psychic",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Medium",
+      "defense": "Low"
+    }
+  },
+  {
+    "name": "Slakoth",
+    "generation": "Gen III",
+    "region": "Hoenn",
+    "color": "Brown",
+    "type": "Normal",
+    "evolution": "Yes",
+    "evolution_method": "Level",
+    "stats": {
+      "speed": "Low",
+      "defense": "High"
+    }
+  }
+]
