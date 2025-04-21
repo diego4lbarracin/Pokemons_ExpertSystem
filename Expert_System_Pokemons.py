@@ -222,7 +222,7 @@ def expert_system():
     # Calculate match scores for all Pokémon
     scored_candidates = [
     (pokemon, calculate_match_score(pokemon, respuestas)) for pokemon in candidates
-]
+    ]
     # Filter out Pokémon with a score of 0 (no matches) and ensure the generation matches
     scored_candidates = [
         (pokemon, score) for pokemon, score in scored_candidates if score > 0 and pokemon["generation"] == respuestas["generation"]
@@ -235,11 +235,14 @@ def expert_system():
     print("\nResults:")
     if len(final_candidates) == 1:
         print(f"\nI think your Pokémon is: {final_candidates[0]}!")
-        print("Is that correct? Here is the list of the five most similar Pokémons:")
-        for pokemon, score in scored_candidates:
-            print(f"- {pokemon['name']} (Match Score: {score})")
-    elif len(scored_candidates) > 0:
-        print("\nI found multiple possible Pokémon (showing up to 5):")
+        
+        play_again = ask_question("\nWould you like to try again? (Yes, No)", ["Yes", "No"])
+        if play_again == "Yes":
+            expert_system()  # Restart the system
+        else:
+            print("\nThank you for playing!")
+    elif len(final_candidates) > 0:
+        print("\nI couldn't find a total match. Here is a list of the 5 closests possibilities Pokémon:")
         for pokemon, score in scored_candidates:
             print(f"- {pokemon['name']} (Match Score: {score})")
         # Ask the user if they want to refine their answers
@@ -249,7 +252,7 @@ def expert_system():
         else:
             print("\nThank you for playing!")
     else:
-        print("\nI couldn't find a match. Maybe your Pokémon isn't in the system.")
+        print("\nI couldn't find a match. Maybe your Pokémon isn't our system yetS.")
         # Ask the user if they want to try again
         play_again = ask_question("\nWould you like to try again? (Yes, No)", ["Yes", "No"])
         if play_again == "Yes":
