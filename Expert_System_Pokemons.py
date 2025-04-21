@@ -1,3 +1,12 @@
+# TALLER 8 SISTEMAS EXPERTOS
+# Developed by:
+#     - Eliana Cepeda.
+#     - David Vargas.
+#     - Santiago Lemus.
+#     - Diego Albarracin
+
+
+# Library used to handle a JSON file.
 import json
 
 
@@ -171,36 +180,36 @@ def expert_system():
 
     gen = ask_question("Which generation is your Pokémon from?", generations)
     respuestas["generation"] = gen
-    candidates = filter_pokemons(candidates, "generation", gen)
+    candidates = apply_inference_rules(candidates, respuestas)
 
     # 2. Region
 
     reg = ask_question("Which region is your Pokémon from?", regions)
     respuestas["region"] = reg
-    candidates = filter_pokemons(candidates, "region", reg)
+    candidates = apply_inference_rules(candidates, respuestas)
 
     # 3. Type
 
     type_ = ask_question("What type is your Pokémon? (e.g. Fire, Electric)", types)
     respuestas["type"] = type_
-    candidates = filter_pokemons(candidates, "type", type_)
+    candidates = apply_inference_rules(candidates, respuestas)
 
     # 4. Evolves?
     evolution = ask_question("Does your Pokémon evolve? (Yes, No)", ["Yes", "No"])
     respuestas["evolution"] = evolution
-    candidates = filter_pokemons(candidates, "evolution", evolution)
+    candidates = apply_inference_rules(candidates, respuestas)
 
     # 5. Evolution method
     if evolution == "Yes":
         method = ask_question("How does your Pokémon evolve?", evo_methods)
         respuestas["evolution_method"] = method
-        candidates = filter_pokemons(candidates, "evolution_method", method)
+        candidates = apply_inference_rules(candidates, respuestas)
 
     # 6. Color
 
     color = ask_question("What is the dominant color of your Pokémon?", colors)
     respuestas["color"] = color
-    candidates = filter_pokemons(candidates, "color", color)
+    candidates = apply_inference_rules(candidates, respuestas)
 
     # 7. Speed
 
